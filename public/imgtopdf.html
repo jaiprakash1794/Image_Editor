@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image ↔ PDF Converter | Adarsh Image Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-exchange-alt"></i> ImageEditer Pro
+            </a>
+            <div class="nav-links">
+                <a href="compressAndResizer.html"><i class="fas fa-compress-alt"></i> Compress</a>
+                <a href="imgtopdf.html" class="active"><i class="fas fa-file-pdf"></i> PDF Tools</a>
+                <a href="backgroundremoval.html"><i class="fas fa-cut"></i> Background</a>
+                <a href="more.html"><i class="fas fa-ellipsis-h"></i> More</a>
+            </div>
+            <div class="nav-actions">
+                <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+                <button id="helpBtn"><i class="fas fa-question"></i></button>
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&h=80&q=80" alt="User Profile" class="profile-img">
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="hero-section">
+            <h1><span class="gradient-text">Image ↔ PDF</span> Converter</h1>
+            <p>Transform between images and PDFs with our powerful conversion tool</p>
+        </div>
+
+        <div class="tool-container">
+            <div class="upload-section glass-card">
+                <h2><i class="fas fa-cloud-upload-alt"></i> Upload Files</h2>
+                <form id="uploadForm" class="dropzone">
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf" multiple required>
+                        <i class="fas fa-file-image"></i>
+                        <p>Drag & drop files here or click to browse</p>
+                        <small class="file-types">Supports: JPG, PNG, PDF</small>
+                    </div>
+                    <div id="preview" class="file-previews"></div>
+                </form>
+            </div>
+
+            <div class="options-panel glass-card">
+                <h2><i class="fas fa-cog"></i> Conversion Options</h2>
+                
+                <div class="option-group">
+                    <label for="conversionType"><i class="fas fa-exchange-alt"></i> Conversion Type</label>
+                    <select id="conversionType" class="styled-select">
+                        <option value="image-to-pdf">Images to PDF</option>
+                        <option value="pdf-to-image">PDF to Images</option>
+                    </select>
+                </div>
+
+                <div id="conversionSettings" class="option-group">
+                    <!-- Dynamic settings will appear here -->
+                </div>
+
+                <button id="convertBtn" class="action-btn convert-btn">
+                    <i class="fas fa-sync-alt"></i> Convert Now
+                </button>
+            </div>
+
+            <div class="download-section glass-card">
+                <h2><i class="fas fa-download"></i> Download Options</h2>
+                <div class="download-options">
+                    <a id="downloadSingleBtn" class="action-btn download-btn" style="display: none;">
+                        <i class="fas fa-file-download"></i> Download Single File
+                    </a>
+                    <a id="downloadZipBtn" class="action-btn download-btn" style="display: none;">
+                        <i class="fas fa-file-archive"></i> Download as ZIP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Processing your files...</p>
+    </div>
+
+    <script src="imgtopdf.js"></script>
+</body>
+</html>
