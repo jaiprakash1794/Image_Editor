@@ -1,6 +1,6 @@
-# Adarsh Image Tools
+# Image_Editor
 
-Adarsh Image Tools is a web application that provides various image processing tools, including image resizing, compression, background removal, and conversion between image and PDF formats. 
+ Image_Editor is a web application that provides various image processing tools, including image resizing, compression, background removal, and conversion between image and PDF formats. 
 
 ## Features
 
@@ -54,8 +54,8 @@ project-root/
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Adarxh-vis/image-tools.git
-    cd image-tools
+    git clone https://github.com/jaiprakash1794/Image_Editor.git
+    cd Image_Editor
     ```
 
 2. Install dependencies:
